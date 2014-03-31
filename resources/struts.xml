@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+   "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+   "http://struts.apache.org/dtds/struts-2.0.dtd">
+<struts>
+	<constant name="struts.devMode" value="true"></constant>
+	<constant name="struts.multipart.maxSize" value="1000000" />
+	<package name="mystruts" extends="tiles-default">
+
+		<!-- Start of Action Mapping for Home Page Load  : Gaurav -->
+		<action name="loadFlipkart">
+			<result type="tiles">/showFlipkart.tiles</result>
+		</action>
+		<!-- End of Action Mapping for Home Page Load : Gaurav -->
+		
+		
+		<!-- Start of Action Mapping for Cart testing  : Gaurav -->
+		<action name="loadProducts" class="edu.iiitb.controller.ShowProductList">
+			<result type="tiles">/showProductList.tiles</result>
+		</action>
+
+		<action name="showProduct" class="edu.iiitb.controller.showProduct">
+			<result type="tiles">/showProduct.tiles</result>
+		</action>
+		<!-- End of Action Mapping for Cart testing  : Gaurav -->
+	</package>
+</struts>
